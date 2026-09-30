@@ -1,16 +1,19 @@
 package com.guirrugo.ecommerce.entities;
 
-import java.util.Date;
+import com.guirrugo.ecommerce.enums.PaymentStatus;
+
+import java.time.LocalDateTime;
+
 
 public class Payment {
 
     private Long id;
     private Order order;
     private double amount;
-    private Date paymentDate;
-    private boolean status;
+    private LocalDateTime paymentDate;
+    private PaymentStatus status;
 
-    public Payment(Order order, double amount, Date paymentDate, boolean status) {
+    public Payment(Order order, double amount, LocalDateTime paymentDate, PaymentStatus status) {
         this.order = order;
         this.amount = amount;
         this.paymentDate = paymentDate;
@@ -37,19 +40,19 @@ public class Payment {
         this.amount = amount;
     }
 
-    public Date getPaymentDate() {
+    public LocalDateTime getPaymentDate() {
         return paymentDate;
     }
 
-    public void setPaymentDate(Date paymentDate) {
+    public void setPaymentDate(LocalDateTime paymentDate) {
         this.paymentDate = paymentDate;
     }
 
-    public boolean isStatus() {
+    public PaymentStatus getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(PaymentStatus status) {
         this.status = status;
     }
 }

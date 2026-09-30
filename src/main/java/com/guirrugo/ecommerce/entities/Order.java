@@ -1,6 +1,6 @@
 package com.guirrugo.ecommerce.entities;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class Order {
@@ -9,10 +9,10 @@ public class Order {
     private User user;
     private List<OrderItem> orderItems;
     private double totalAmount;
-    private Date orderDate;
+    private LocalDateTime orderDate;
     private boolean status;
 
-    public Order(User user, double totalAmount, Date orderDate, boolean status) {
+    public Order(User user, double totalAmount, LocalDateTime orderDate, boolean status) {
         this.user = user;
         this.totalAmount = totalAmount;
         this.orderDate = orderDate;
@@ -43,11 +43,11 @@ public class Order {
         this.totalAmount = totalAmount;
     }
 
-    public Date getOrderDate() {
+    public LocalDateTime getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(LocalDateTime orderDate) {
         this.orderDate = orderDate;
     }
 
